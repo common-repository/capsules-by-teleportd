@@ -1,0 +1,233 @@
+/*
+Copyright 2012 Teleportd Ltd.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License, version 2, as 
+published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+
+/* @begin teleportd modal window */
+
+.teleportd-overlay {
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: inset 0 0 100px #000;
+		 -moz-box-shadow: inset 0 0 100px #000;
+					box-shadow: inset 0 0 100px #000;
+}
+
+.teleportd-modal {
+	position: absolute;
+	z-index: 100001;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	margin: -110px 0 0 -200px;
+	border: 0;
+	-webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+		 -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+					box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 6px;
+		 -moz-border-radius: 6px;
+					border-radius: 6px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.teleportd-modal .modal-header {
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	border: 1px solid #001e43;
+	background: #155aa7;
+	background: -moz-linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b91d2), color-stop(100%, #155aa7));
+	background: -webkit-linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	background: -o-linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	background: -ms-linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	background: linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5b91d2', endColorstr='#155aa7', GradientType=0);
+	-webkit-box-shadow: inset 0 1px 0 #97b8e4;
+		 -moz-box-shadow: inset 0 1px 0 #97b8e4;
+					box-shadow: inset 0 1px 0 #97b8e4;
+	-webkit-border-radius: 6px 6px 0 0;
+		 -moz-border-radius: 6px 6px 0 0;
+					border-radius: 6px 6px 0 0;
+}
+
+.teleportd-modal .modal-header h3 {
+	padding: 12px;
+	margin: 0;
+	font-weight: bold;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+.teleportd-modal .modal-header .btn,
+.teleportd-modal .modal-header .btn.disabled,
+.teleportd-modal .modal-header .btn[disabled],
+.teleportd-modal .modal-header .btn.disabled:active,
+.teleportd-modal .modal-header .btn[disabled]:active,
+.teleportd-modal .modal-header .btn:hover {
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 10px;
+	text-shadow: 0 1px 2px #002f69;
+	background: #155aa7;
+	background: -moz-linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b91d2), color-stop(100%, #155aa7));
+	background: -webkit-linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	background: -o-linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	background: -ms-linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	background: linear-gradient(top, #5b91d2 0%, #155aa7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5b91d2', endColorstr='#155aa7', GradientType=0);
+	-webkit-box-shadow: inset 0 1px 0 #97b8e4, 0 1px 0 #6487b7;
+		 -moz-box-shadow: inset 0 1px 0 #97b8e4, 0 1px 0 #6487b7;
+					box-shadow: inset 0 1px 0 #97b8e4, 0 1px 0 #6487b7;
+	-webkit-border-radius: 4px;
+		 -moz-border-radius: 4px;
+					border-radius: 4px;
+	-webkit-background-clip: padding-box;
+		 -moz-background-clip: padding;
+					background-clip: padding-box;
+}
+
+.teleportd-modal .modal-header .btn:active {
+	background: #144e95;
+	-webkit-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.4), 0 1px 0 #6487b7;
+		 -moz-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.4), 0 1px 0 #6487b7;
+					box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.4), 0 1px 0 #6487b7;
+}
+
+.teleportd-modal .modal-header .btn-primary,
+.teleportd-modal .modal-header .btn-primary.disabled,
+.teleportd-modal .modal-header .btn-primary[disabled],
+.teleportd-modal .modal-header .btn-primary.disabled:active,
+.teleportd-modal .modal-header .btn-primary[disabled]:active,
+.teleportd-modal .modal-header .btn-primary:hover {
+	color: #555;
+	text-shadow: 0 1px 0 #fff;
+	font-weight: bold;
+	padding: 5px 10px;
+	border: 1px solid #777;
+	background: #aaa;
+	background: -moz-linear-gradient(top, #eee 0%, #bbb 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eee), color-stop(100%, #bbb));
+	background: -webkit-linear-gradient(top, #eee 0%, #bbb 100%);
+	background: -o-linear-gradient(top, #eee 0%, #bbb 100%);
+	background: -ms-linear-gradient(top, #eee 0%, #bbb 100%);
+	background: linear-gradient(top, #eee 0%, #bbb 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#bbbbbb', GradientType=0);
+	border: 1px solid #002f69;
+	-webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 0 #6487b7;
+		 -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 0 #6487b7;
+					box-shadow: inset 0 1px 0 #fff, 0 1px 0 #6487b7;
+}
+
+.teleportd-modal .modal-header .btn-primary:active {
+	color: #555;
+	text-shadow: 0 1px 0 #eee;
+	background: #bbb;
+	-webkit-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.6), 0 1px 0 #6487b7;
+		 -moz-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.6), 0 1px 0 #6487b7;
+					box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.6), 0 1px 0 #6487b7;
+}
+
+.teleportd-modal .modal-header-lb,
+.teleportd-modal .modal-header-rb,
+.teleportd-modal .modal-header-lb:hover,
+.teleportd-modal .modal-header-rb:hover {
+	border: 1px solid #002f69;
+}
+
+.teleportd-modal .modal-header-lb {
+	float: left;
+	margin: 6px 0 0 6px;
+}
+
+.teleportd-modal .modal-header-rb {
+	float: right;
+	margin: 6px 6px 0 0;
+}
+
+.teleportd-modal .modal-body {
+	padding: 0;
+	max-height: 600px;
+	background: #eee;
+	border: 1px solid #333;
+	border-top: 0;
+}
+
+.teleportd-modal .modal-body .text-wrapper {
+	padding: 15px;
+	padding-top: 12px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.teleportd-modal .modal-body.no-footer {
+	-webkit-border-radius: 0 0 6px 6px;
+		 -moz-border-radius: 0 0 6px 6px;
+					border-radius: 0 0 6px 6px;
+}
+
+.teleportd-modal .modal-body label {
+	display: block;
+	margin: 10px 0 5px 0;
+	font-weight: bold;
+}
+
+.teleportd-modal .modal-body label:first-child {
+	margin-top: 0;
+}
+
+.teleportd-modal .modal-body input[type="text"],
+.teleportd-modal .modal-body input[type="email"],
+.teleportd-modal .modal-body input[type="password"],
+.teleportd-modal .modal-body textarea {
+	width: 368px;
+	padding: 7px 5px;
+	margin: 0;
+	background: #fcfcfc;
+	border: 1px solid #aaa;
+}
+
+.teleportd-modal .modal-body input[type="text"]:focus,
+.teleportd-modal .modal-body input[type="email"]:focus,
+.teleportd-modal .modal-body input[type="password"]:focus,
+.teleportd-modal .modal-body textarea:focus {
+	border: 1px solid #888;
+	background: #fff;
+}
+
+.teleportd-modal .teleportd-plugin-width {
+	width: 175px;
+	float: left;
+	margin: 15px 0 0;
+}
+
+.teleportd-modal .teleportd-plugin-height {
+	width: 170px;
+	margin: 15px 0 0 193px;
+}
+
+.teleportd-modal .teleportd-plugin-width input[type="text"],
+.teleportd-modal .teleportd-plugin-height input[type="text"] {
+	width: 175px;
+}
+
+/* @end teleportd modal window */
